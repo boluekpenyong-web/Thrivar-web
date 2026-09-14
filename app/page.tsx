@@ -9,13 +9,17 @@ export default function Home() {
         </div>
         <h1 className="font-display text-6xl text-cobalt mb-4">Thrivar</h1>
         <p className="font-display italic text-xl text-ink mb-8">
-          A transformation operating system.
+          The operating system for becoming.
         </p>
-        <p className="max-w-sm text-base leading-relaxed text-ink/70 mb-10">
-          Not a chatbot. Not a checklist. A structured place to understand
-          where you are, what&apos;s keeping you there, and how to move
-          toward who you&apos;re becoming.
+        <p className="max-w-md text-base leading-relaxed text-ink/70 mb-8">
+          A personal transformation system that brings your inner world,
+          direction, decisions, and growth into one place.
         </p>
+        <div className="text-base leading-relaxed text-ink/80 mb-10 space-y-1">
+          <p>See where you are.</p>
+          <p>Understand what&apos;s shaping you.</p>
+          <p>Build where you&apos;re going.</p>
+        </div>
         <div className="flex gap-4">
           <Link
             href="/signup"
@@ -32,19 +36,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-8 py-14 bg-cobalt">
-        <div className="max-w-sm mx-auto divide-y divide-cream/20">
+      <div className="px-8 py-16 bg-cobalt">
+        <div className="max-w-md mx-auto divide-y divide-cream/20">
           {[
-            "Six dimensions. One honest picture of where you are.",
-            "A pathway built around what you actually need.",
-            "A coach that already knows your story.",
-          ].map((line) => (
-            <p
-              key={line}
-              className="py-5 font-display italic text-lg text-center text-cream"
-            >
-              {line}
-            </p>
+            { title: "6 Dimensions", body: "One honest picture of your life." },
+            { title: "Your Path", body: "A transformation journey built around what you need next." },
+            { title: "Thrive Intelligence", body: "An intelligence that knows your journey, connects the dots, and evolves with you." },
+          ].map((item) => (
+            <div key={item.title} className="py-6 text-center">
+              <p className="font-display text-xl text-cream mb-2">{item.title}</p>
+              <p className="text-sm leading-relaxed text-cream/75">{item.body}</p>
+            </div>
           ))}
         </div>
       </div>
